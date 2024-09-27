@@ -17,15 +17,18 @@ library(tidyverse)
 # Do not edit this code chunk!
 visitors <- read_csv("data/UK-visitor-numbers.csv")
 ```
-
+# warmup
+348 attractions
+data types of character (name of place, admission, setting, region), double (dates)
+in 2022 more visited Crown Estate Windsor than any other site
+free admission to National Museum Scotland
 
 # Wrangling Data
 
 ## Question 1
 
 _How many tourist attractions are there in the data set?_
-348 attractions
-data types of character (name of place, admission, setting, region), double (dates)
+
 
 ```{r Q1}
 visitors %>% count()
@@ -37,8 +40,7 @@ _Create a frequency table of the number of tourist attractions in the data set b
 
 ```{r Ex_a}
 # Delete the comment '#' symbol at the start of the next line and complete the code. 
-
-#visitors %>% count(_____)
+visitors %>% count(region)
 ```
 
 ### Exercise b.
@@ -48,7 +50,7 @@ _Create a frequency table by `admission` and `setting`._
 ```{r Ex_b}
 # Delete the comment '#' symbol at the start of the next line and complete the code.
 
-#visitors %>% count(_____, _____)
+visitors %>% count(admission, setting)
 ```
 
 
@@ -78,9 +80,7 @@ visitors %>% arrange(desc(n_2022))
 
 _What are the top 10 most visited attractions in 2021?_
 ```{r Ex_c}
-#visitors %>% 
-#  arrange(____(____)) %>%
-#  head(n = ____)
+visitors %>% arrange(desc(n_2022)) %>% head(n=10)
 ```
 
 ## Question 4
