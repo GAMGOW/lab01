@@ -19,12 +19,13 @@ visitors <- read_csv("data/UK-visitor-numbers.csv")
 ```
 
 
-
 # Wrangling Data
 
 ## Question 1
 
 _How many tourist attractions are there in the data set?_
+348 attractions
+data types of character (name of place, admission, setting, region), double (dates)
 
 ```{r Q1}
 visitors %>% count()
